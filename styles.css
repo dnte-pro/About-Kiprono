@@ -41,8 +41,8 @@ body {
   list-style: none;
   gap: 1rem;
   align-items: center;
-  justify-content: space-around;
-  background-color: #fff;
+  justify-content: center;
+  
 }
 
 .nav-links li a {
