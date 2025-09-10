@@ -1,4 +1,6 @@
-/* Reset */
+/* =====================
+   Global Reset & Base
+===================== */
 * {
   margin: 0;
   padding: 0;
@@ -12,59 +14,76 @@ body {
   background-color: #f9f9f9;
 }
 
-/* Container */
+/* =====================
+   Layout Container
+===================== */
 .container {
   width: 85%;
   max-width: 1100px;
   margin: 0 auto;
   padding: 20px 0;
+  color: #5a75c2;
 }
 
+/* =====================
+   Header & Navbar
+===================== */
 .header-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-
-/* Navbar */
-.navbar {
-  background: #7e8152;
-  color: #fff;
-  padding: 10px 0;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-.nav-links {
-  display: flex;
-  list-style: none;
-  gap: 1rem;
-  align-items: center;
-  justify-content: center;
   
 }
 
+/* Navbar links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 24px;              /* spacing between items */
+  align-items: center;    /* vertical alignment */
+  justify-content: center;/* center horizontally */
+  margin: 24px auto;
+  padding: 0;
+}
+
 .nav-links li a {
-  color: #6b1d1d;
+  color: #0a0a0a;
   text-decoration: none;
   font-weight: bold;
 }
 
 .nav-links li a:hover {
-  color: #299675;
+  color: aqua;
 }
 
+/* Navbar block */
+nav {
+  background: slategray;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 8px;
+  margin: auto;
+}
+
+/* Hamburger (hidden by default, visible on mobile) */
 .hamburger {
-  
   display: none;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   background: none;
   border: none;
   cursor: pointer;
+  color: #1ab95d;
+  padding: 6px 10px;
+  border-radius: 6px;
+  position: absolute;
+  right: 20px;   /* sticks it to the right */
+  top: 8.5%;
+  transform: translateY(-50%);
 }
 
-/* Sections */
+/* =====================
+   Sections & Content
+===================== */
 section {
   padding: 50px 0;
   border-bottom: 1px solid #ddd;
@@ -85,7 +104,9 @@ h2 {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Footer */
+/* =====================
+   Footer
+===================== */
 footer {
   text-align: center;
   padding: 20px;
@@ -94,24 +115,33 @@ footer {
   margin-top: 20px;
 }
 
-/* Mobile Styles */
+/* =====================
+   Mobile Styles
+===================== */
 @media (max-width: 768px) {
+
+  /* Show hamburger */
   .hamburger {
     display: block;
   }
 
+  /* Hide nav initially on mobile */
   .nav-links {
     position: absolute;
-    top: 60px;
+    top: 72px;              /* adjust based on header height */
     right: 20px;
-    background: #1e3a8a;
+    background: #3b3f3a;
     flex-direction: column;
-    gap: 1rem;
-    padding: 1rem;
+    gap: 12px;
+    padding: 12px;
     border-radius: 8px;
     display: none;
+    min-width: 180px;
+    z-index: 1000;
   }
+  
 
+  /* Show nav when toggled */
   .nav-links.show {
     display: flex;
   }

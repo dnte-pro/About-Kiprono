@@ -1,29 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Daniel's Portfolio</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Kiprono</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <!-- Header -->
   <header>
-  <div class="container">
-    <h1>Kiprono's About</h1>
-    <nav class="navbar">
-      <!-- Hamburger toggle button -->
-      <button class="hamburger" id="hamburger">&#9776;</button>
-      
-      <ul class="nav-links" id="nav-links">
-        <li class="link"><a href="#about">About</a></li>
-        <li class="link"><a href="#projects">Projects</a></li>
-        <li class="link"><a href="#certifications">Certifications & Skills</a></li>
-        <li class="link"><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
+    <div class="container">
+      <h1>Kiprono's About</h1>
 
+      <!-- Hamburger button (visible on small screens) -->
+      <button id="hamburger-btn" class="hamburger" aria-label="Toggle navigation">
+        ☰
+      </button>
+
+      <!-- Navigation -->
+      <nav>
+        <ul id="navbar" class="nav-links">
+          <li class="link"><a href="#about">About</a></li>
+          <li class="link"><a href="#projects">Projects</a></li>
+          <li class="link"><a href="#certifications">Certifications & Skills</a></li>
+          <li class="link"><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
   <!-- About Section -->
   <section id="about">
@@ -118,11 +122,14 @@
     </div>
   </section>
 
+  <!-- Footer -->
   <footer>
     <div class="container">
       <p>&copy; 2025 Kiprono. All rights reserved.</p>
     </div>
   </footer>
-   <script src="script.js"></script>
+
+  <!-- Script -->
+  <script src="script.js"></script>
 </body>
 </html>
