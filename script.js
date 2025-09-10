@@ -5,15 +5,28 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     document.querySelector(this.getAttribute('href')).scrollIntoView({
       behavior: 'smooth'
     });
+
+    // Close menu on mobile after clicking a link
+    const navbar = document.getElementById("navbar");
+    const hamburger = document.getElementById("hamburger-btn");
+    if (navbar.classList.contains("show")) {
+      navbar.classList.remove("show");
+      hamburger.textContent = "☰";
+    }
   });
 });
 
-// Example: Toggle mobile menu (if you add a hamburger later)
-const menuBtn = document.querySelector('#menu-btn');
-const navLinks = document.querySelector('#nav-links');
+// Toggle mobile menu
+const hamburger = document.getElementById("hamburger-btn");
+const navbar = document.getElementById("navbar");
 
-if (menuBtn) {
-  menuBtn.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-  });
-}
+hamburger.addEventListener("click", () => {
+  navbar.classList.toggle("show");
+
+  // Change icon
+  if (navbar.classList.contains("show")) {
+    hamburger.textContent = "✖";
+  } else {
+    hamburger.textContent = "☰";
+  }
+});
